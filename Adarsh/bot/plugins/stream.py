@@ -119,6 +119,9 @@ async def private_receive_handler(c: Client, m: Message):
         stream_link = get_shortlink(stream_links) 
         online_link = get_shortlink(online_links)
         tutorial = f"{Var.TUTORIAL_URL}"
+    except Exception as e:
+    # Handle the error
+    print(f"An error occurred: {str(e)}")
   
         msg_text ="""<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>\n\n<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>\n\n<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n\n<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>\n\n<b> 🖥WATCH  :</b> <i>{}</i>\n\n<b>🚸 Nᴏᴛᴇ : LINK WILL NOT EXPIRE UNTIL I DELETE</b>""" 
   
